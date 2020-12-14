@@ -13,27 +13,11 @@ html(lang="ru")
     meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="format-detection" content="telephone=no")
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet")
     link(rel="stylesheet", href="./styles/css/vendor.css")
     link(rel="stylesheet", href="./styles/css/main.css")
   body
-
-
-    .mobile-menu-bg
-
-    .mobile-menu
-      .mobile-menu__container
-        .mobile-menu__nav
-          .mobile-menu__link.mobile-menu__link_big: a(href="#prems").mobile-anchor Преимущества
-          .mobile-menu__link.mobile-menu__link_big: a(href="#support").modal-open Поддержка
-          .mobile-menu__link.mobile-menu__link_big: a(href="#records").mobile-anchor Рекорды
-
-        hr
-
-        .downloads.downloads_black
-          a(href="").download
-            img(src="./img/download-google.svg", alt="")
-          a(href="").download
-            img(src="./img/download-apple.svg", alt="")
 
 
 
@@ -45,12 +29,8 @@ html(lang="ru")
               img(src="./img/logo.svg", alt="")
           .header__right
             .nav
-              .nav__link.nav__link_anchor: a(href="#prems").anchor Преимущества
-              .nav__link: a(href="#support").modal-open Поддержка
-              .nav__link.nav__link_anchor: a(href="#records").anchor Рекорды
-            a(href="#buy").btn.anchor
-              .btn__text Купить
-            .burger
+              .nav__link: a(href="#prems") Конкурсы
+              .nav__link: a(href="#support") Добавить
 
       block content
 

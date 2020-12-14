@@ -3,9 +3,38 @@ extends layout.pug
 block content
   
   section.hero
-    h1 some
+    .wrapper
+      h1 Конкурсы для дизайнеров
+      p Мы собрали для вас все значимые конкурсы с хорошими призами, так что залетайте :)
 
-
+  .wrapper
+    section.cards.container
+      .col.col--lg-6
+         a(href="").card
+          .card__title Денежные переводы во времени
+          .card__prizes
+            .card__prize
+              .card__prize-place 1 место
+              .card__prize-text MacBook Pro на 256 ГБ
+            .card__prize
+              .card__prize-place 2 место
+              .card__prize-text Iphone Pro X
+            .card__prize
+              .card__prize-place 3 место
+              .card__prize-text Лично пожмёт руку директор
+          .card__middle
+            .card__dates 01.06 – 14.06
+            .card__sponsr Газпромбанк
+          .card__bottom
+            .card__tags
+              .card__tag Приложения
+              .card__tag Веб
+              .card__tag Брендинг
+            .sponsrs-logos
+              .sponsr-logo
+                img(src="./img/gazprombank.svg")
+              .sponsr-logo
+                img(src="./img/vk.svg")
 
 
 
