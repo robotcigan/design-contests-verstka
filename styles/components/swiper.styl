@@ -1,0 +1,97 @@
+.swiper
+  &-wrapper
+    transition-timing-function cubic-bezier(.16,1.08,.38,.98)
+  &-pagination
+    // margin-top 4rem
+    margin-bottom 4rem
+    position initial
+    transform translateY(4rem)
+    &-bullet
+      background-color #ddd
+      opacity 1
+      margin 0 1rem !important
+      &-active
+        background-color $primary
+  &-button-prev,
+  &-button-next
+    bottom 0
+    justify-content center
+    margin-top 0
+    margin auto
+    top 0
+    circleHover(6.4rem, #eee)
+    &:before
+      font-family $font
+      font-size 0
+    &:after
+      background-color $primary
+    img
+      transition $transition
+    &:hover
+      img
+        filter invert(100%)
+  &-button-prev
+    left 2.4rem
+    // &:before
+    //   content url('../../img/arrow-left.svg')
+  &-button-next
+    right 2.4rem
+    // &:before
+    //   content url('../../img/arrow-right.svg')
+  &-slide
+    opacity 0
+    transform translateX(8rem)
+    transition transform 2s cubic-bezier(.16,1.08,.38,.98), opacity 2s cubic-bezier(.16,1.08,.38,.98)
+    for num in 1..6
+      &:nth-child({num})
+        transition-delay (num/10) s
+  &-container.animated
+    .swiper
+      &-slide
+        opacity 1
+        transform none
+
+.tracks
+  .swiper
+    &-pagination
+      margin-bottom 0
+      position relative
+      transform translateY(-4.8rem)
+      z-index 1000
+      &-bullet
+        background-color #fff
+        &-active
+          background-color $primary
+    &-buttons-wrapper
+      align-items center
+      display flex
+      height 100%
+      position absolute
+      top 0
+      width 100%
+    &-buttons-container
+      display flex
+      justify-content flex-end
+      // transform translateY(2.4rem)
+    &-button-prev,
+    &-button-next
+      flex-shrink 0
+      margin 0
+      position relative
+      transform translateY(-3.2rem)
+    &-button-prev
+      margin-right 6.4rem
+
+
+
+
+@media(max-width 1200px)
+  .swiper
+    &-button-prev
+      left 0
+    &-button-next
+      right 0
+  .tracks
+    .swiper
+      &-buttons-container
+        display none

@@ -1,0 +1,68 @@
+.tabs
+  &__header
+    // border-bottom $border
+    display flex
+    justify-content center
+    margin-bottom 4rem
+    position relative
+  &__links
+    border-bottom $border
+  &__link
+    align-items center
+    cursor pointer
+    display flex
+    justify-content center
+    padding 1em 0
+    padding-top 0
+    position relative
+    text-align center
+    linkHover($primary)
+    &:before
+      background-color $primary
+    &_active
+      color $primary
+      &:before
+        width 100%
+    &:not(:last-child)
+      margin-right 2em
+
+  &__content
+    display none
+    img
+      max-width 100%
+    &_active
+      animation tabs .3s ease
+      display block
+
+@keyframes tabs
+  from
+    opacity 0
+    transform translateY(.5rem)
+  to
+    opacity 1
+    transform none
+
+
+// @media(max-width 1000px)
+//   .tabs
+//     &__header
+//       // overflow hidden
+//       overflow-x scroll
+//       overflow-y hidden
+//       margin-left -1.2rem
+//       margin-right -1.2rem
+//       justify-content initial
+//       padding 0 1.2rem
+//       width calc(100% + 1.2rem)
+//       -webkit-overflow-scrolling touch
+//     &__content
+//       padding 0
+//     &__link
+//       margin-right 2.4rem
+//       &:last-child
+//         margin-right 4rem
+
+@media(max-width 767px)
+  .tabs
+    &__header
+      margin-top 1em

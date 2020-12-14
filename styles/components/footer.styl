@@ -1,0 +1,63 @@
+.footer
+  background-color $light-gray
+  padding 5.6rem 0
+  &__top
+    align-items center
+  &__links
+    display flex
+  &__link
+    font-weight 600
+    &:not(:last-child)
+      margin-right 2em
+  &__right
+    display flex
+    justify-content flex-end
+  .downloads
+    .download
+      img
+        filter grayscale(1) contrast(2)
+        max-width 12rem
+      &:hover
+        opacity 1
+  &__bottom
+    border-top $border
+    color $gray
+    display flex
+    // font-size 1.4rem
+    font-weight 500
+    justify-content space-between
+    margin-top 4rem
+    // padding 2.4rem 0
+    padding-top 2.4rem
+  .madeby
+    display flex
+    &__1
+      margin-right 1em
+    a
+      linkHover($primary)
+
+.copyright
+  flex-shrink 0
+  width 33%
+
+
+@media(max-width 767px)
+  .footer
+    &__links
+      display block
+    &__link
+      margin-bottom .5em
+    &__right
+      justify-content initial
+    &__bottom
+      display block
+    .copyright
+      margin-bottom .5em
+      width 100%
+
+
+
+
+
+
+

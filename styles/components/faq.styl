@@ -1,0 +1,53 @@
+.faq
+  &:not(:last-child)
+    border-bottom $border
+  &__container
+    position relative
+  &__top
+    align-items center
+    cursor pointer
+    display flex
+    justify-content space-between
+  &__arrow
+    border-radius 50%
+    border $border
+    flex-shrink 0
+    position relative
+    size(4rem)
+    transition $transition
+    &:before,
+    &:after
+      background-color $main
+      center()
+      content ''
+      position absolute
+      transition $transition
+    &:before
+      height 2px
+      width 12px
+    &:after
+      height 12px
+      width 2px
+  &__title
+    font-size 1.8rem
+    font-weight 800
+    line-height 1.2
+    padding 1em 0
+    padding-right 1.5em
+  &__text
+    display none
+    color $gray-text
+    // padding-right 12rem
+    p
+      color $gray-text
+  &_active
+    .faq
+      &__arrow
+        border-color #aaa
+        &:before
+          opacity 0
+        &:after
+          transform rotate(90deg)
+
+
+

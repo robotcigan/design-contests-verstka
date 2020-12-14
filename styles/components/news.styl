@@ -1,0 +1,70 @@
+.news
+  .new
+    align-items center
+    // border-top $border
+    display flex
+    justify-content space-between
+    opacity 0
+    padding 3.2rem 0
+    verticalBgHover($primary)
+    transform translateY(4rem)
+    transition $transition2
+    for num in 1..10
+      &:nth-child({num})
+        transition-delay ((num - 1) / 10) s
+    &:before
+      left -10%
+      width 120%
+    &:not(:last-child)
+      border-bottom $border
+    &__title
+      font-size 2.4rem
+      font-weight 600
+      margin-bottom .5em
+      transition $transition
+    &__date
+      transition $transition
+    &__os
+      display flex
+      justify-content center
+      width 4rem
+      img
+        transition $transition
+    &:hover
+      .new
+        &__title
+          color #fff
+        &__date
+          color #fff
+        &__os
+          img
+            filter contrast(3)
+            // opacity .7
+  &.animated
+    .new
+      opacity 1
+      transform none
+
+
+
+@media(max-width 767px)
+  .news
+    .new
+      align-items initial
+      flex-direction column
+      padding 2.4rem 0
+      &__right
+        order -1
+        margin-bottom 1.6rem
+      &__title
+        font-size 2rem
+      &__os
+        justify-content initial
+        img
+          max-height 2.4rem
+
+
+
+
+
+

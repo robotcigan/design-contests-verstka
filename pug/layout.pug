@@ -1,0 +1,106 @@
+mixin webp(name, format)
+  picture
+    source(srcset="./img/webp/" + name + ".webp" type="image/webp" alt="")
+    img(src="./img/" + name + "." + format + "" , alt="")
+
+block condition
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Design Contests
+    meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="stylesheet", href="./styles/css/vendor.css")
+    link(rel="stylesheet", href="./styles/css/main.css")
+  body
+
+
+    .mobile-menu-bg
+
+    .mobile-menu
+      .mobile-menu__container
+        .mobile-menu__nav
+          .mobile-menu__link.mobile-menu__link_big: a(href="#prems").mobile-anchor Преимущества
+          .mobile-menu__link.mobile-menu__link_big: a(href="#support").modal-open Поддержка
+          .mobile-menu__link.mobile-menu__link_big: a(href="#records").mobile-anchor Рекорды
+
+        hr
+
+        .downloads.downloads_black
+          a(href="").download
+            img(src="./img/download-google.svg", alt="")
+          a(href="").download
+            img(src="./img/download-apple.svg", alt="")
+
+
+
+    main.page
+      header.header
+        .header__container.wrapper
+          .header__left
+            a(href="./pages.html").logo
+              img(src="./img/logo.svg", alt="")
+          .header__right
+            .nav
+              .nav__link.nav__link_anchor: a(href="#prems").anchor Преимущества
+              .nav__link: a(href="#support").modal-open Поддержка
+              .nav__link.nav__link_anchor: a(href="#records").anchor Рекорды
+            a(href="#buy").btn.anchor
+              .btn__text Купить
+            .burger
+
+      block content
+
+
+      footer.footer
+        .wrapper
+          .container.footer__top
+            .col.col--lg-4
+              .logo
+                img(src="./img/logo.svg", alt="").svg
+            .col.col--lg-4
+              .footer__links
+                .footer__link: a(href="#prems").footer-anchor Преимущества
+                .footer__link: a(href="#support").modal-open Поддержка
+                .footer__link: a(href="#records").footer-anchor Рекорды
+            .col.col--lg-4
+              .footer__right
+                .downloads
+                  a(href="").download
+                    img(src="./img/download-google.svg", alt="")
+                  //- a(href="").download
+                  //-   img(src="./img/download-apple.svg", alt="")
+          .footer__bottom.animation-up.wow
+            .copyright © DriveExpert, 2020
+            .madeby
+              .madeby__1 Дизайн и вёрстка 
+                a(href="thisdesign.ru") thisdesign.ru
+              .madeby__2 Разработка 
+                a(href="") sample.com
+
+            //- .disclamer Дополнительные материалы взяты из открытых источников
+
+
+
+
+
+    script(src="./js/jquery-2.2.1.min.js")
+    script(src="./js/TweenMax.min.js")
+    script(src="./js/ScrollMagic.min.js")
+    script(src="./js/debug.addIndicators.min.js")
+    script(src="./js/animation.gsap.min.js")
+    script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js")
+    script(src="./js/smoothscroll.js")
+    script(src="./js/jquery.blast.min.js")
+    //- script(src="./js/smoothscroll-js.js")
+    //- script(src="./js/anotherscroll.js")
+    script(src="./js/swiper.min.js")
+    script(src="./js/wow.min.js")
+    script(src="./js/jquery.inputmask.bundle.min.js")
+    script(src="./js/jquery.nice-select.min.js")
+    script(src="./js/jquery.animateNumber.min.js")
+    script(src="./js/main.js")
+    script(src="./js/animations.js")
